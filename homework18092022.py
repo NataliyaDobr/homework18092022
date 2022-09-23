@@ -7,14 +7,21 @@
 # print(result)
 
 # 2. задайте строку из набора чисел. напишите программу, которая покажет большее и меньшее число.
-def select (f,col):
-    return[f(x) for x in col]
+# def select (f,col):
+#     return[f(x) for x in col]
 
-def where (f,col):
-    return[x for x in col if f(x)]
+# def where (f,col):
+#     return[x for x in col if f(x)]
 
-data = '1 2 25 988 36'.split()
-res = select(int, data)
-res_max = where (lambda x: x==max(res), res)
-res_min = where (lambda x: x==min(res), res)
-print(res_max, res_min)
+# data = '1 2 25 988 36'.split()
+# res = select(int, data)
+# res_max = where (lambda x: x==max(res), res)
+# res_min = where (lambda x: x==min(res), res)
+# print(res_max, res_min)
+
+# 3. Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+# Пример: - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+some_list = [1.1, 1.2, 3.1, 5, 10.01]
+fract_part = [some_list[i]-int(some_list[i]) for i in range(len(some_list))]
+print(max(fract_part)-min(fract_part))
+
